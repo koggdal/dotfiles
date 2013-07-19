@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Variables
+dir=$(pwd)
+dir_old=~/.dotfiles_old
+dir_oldText="~/.dotfiles_old"
+files="
+"
+
+# Create backup directory
+echo "Creating $dir_oldText for backup of conflicting dotfiles in ~"
+mkdir -p $dir_old
+
+# Backup conflicting dotfiles
+echo -e "\nMoving any conflicting dotfiles from ~ to $dir_oldText..."
+for file in $files; do
+  if [ -L ~/$file ]; then
+    echo "  Found ~/$file to be a symlink, removing it"
+    rm ~/$file
+  fi
+  if [ -f ~/$file ]; then
+    echo "  Moving $file"
+    mv ~/$file $dir_old
+  fi
+done
+
+# Create symlinks for new dotfiles
+echo -e "\nCreating symlinks in ~ for all dotfiles..."
+for file in $files; do
+  echo "  Creating symlink to $file in ~"
+  ln -s $dir/$file ~/$file
+done
+
+# Done
+echo -e "\nAll done. Happy hacking."
