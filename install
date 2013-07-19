@@ -32,5 +32,11 @@ for file in $files; do
   ln -s $dir/$file ~/$file
 done
 
+# Check for ~/.extra file
+if [ -f ~/.extra ]; then
+  echo -e "\nThe ~/.extra file was found, running commands..."
+  source ~/.extra
+fi
+
 # Done
 echo -e "\nAll done. Happy hacking."
