@@ -40,5 +40,9 @@ if [ -f ~/.extra ]; then
   source ~/.extra
 fi
 
+# Set permissions on update script
+echo -e "\nSetting permissions on update script..."
+chmod +x update
+
 # Done
 echo -e "\nAll done. Happy hacking."

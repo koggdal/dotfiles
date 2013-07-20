@@ -1,0 +1,10 @@
+#!/bin/bash
+
+echo "Stashing any local changes..."
+git stash
+
+echo -e "\nPulling down the latest commits..."
+git pull
+
+echo -e "\nStarting the install script...\n"
+bash ./install

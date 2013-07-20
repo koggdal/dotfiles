@@ -20,7 +20,16 @@ cd dotfiles && chmod +x install && ./install
 
 ### Updates
 
-To install any new files (that might have appeared after a git pull), just run the install script again:
+To update the files to the latest version on GitHub, run the update command:
+
+```
+./update
+```
+
+It will stash any local changes, pull down the latest commits and then run the install script.
+
+If you prefer a slightly more manual process, handle your local changes and pull yourself,
+then just run the install script again:
 
 ```
 ./install
