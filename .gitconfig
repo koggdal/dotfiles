@@ -1,0 +1,46 @@
+[push]
+	default = simple
+
+[core]
+	autocrlf = input
+	safecrlf = true
+	excludesfile = ~/.gitignore
+
+[gc]
+	auto = 1
+
+[color]
+	ui = auto
+
+[branch]
+	autosetuprebase = always
+
+[alias]
+	# Checkout branch
+	co = git checkout
+
+	# Checkout branch, and create it if it doesn't exist
+	go = git checkout -B
+
+	# Commit
+	ci = commit
+
+	# Ammend commit
+	cia = commit --amend
+
+	# Status
+	st = status
+
+	# Cherry-pick
+	cp = cherry-pick
+
+	# Log, but compact and pretty
+	lg = log --graph --topo-order --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cred<%an>%Creset'
+
+	# Update submodules, recursively
+	sup = submodule update --init --recursive
+
+	# When stashing, keep the stuff you've already added to the index in there. In
+  # other words, stash whatever git diff tells you differs.
+	sta = stash --keep-index
+

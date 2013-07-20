@@ -5,6 +5,7 @@ dir=$(pwd)
 dir_old=~/.dotfiles_old
 dir_oldText="~/.dotfiles_old"
 files="
+.gitconfig
 .vimrc
 "
 
