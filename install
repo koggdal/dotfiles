@@ -7,6 +7,7 @@ dir_oldText="~/.dotfiles_old"
 files="
 .gitconfig
 .vimrc
+.zshrc
 "
 
 # Create backup directory
