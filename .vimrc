@@ -5,12 +5,17 @@ set wildmenu               " Tab completion when opening files
 set ttyfast                " Optimize for fast terminal connections
 set encoding=utf-8 nobomb  " Use UTF-8 without BOM
 
-" Visual settings
-syntax on         " Enable syntax highlighting
-set laststatus=2  " Always show the status bar
-set number        " Enable line numbers
-set ruler         " Show cursor position (row/col)
-set showcmd       " Show information about the current command
+" Visual elements
+set laststatus=2               " Always show the status bar
+set number                     " Enable line numbers
+set ruler                      " Show cursor position (row/col)
+set showcmd                    " Show information about the current command
+
+" Style settings
+syntax on                      " Enable syntax highlighting
+set background=dark            " Make the background dark
+let g:solarized_termcolors=256 " Fancy fallback so that you don't have to change your terminal's color scheme
+colorscheme solarized          " The solarized colorscheme
 
 " Whitespace settings
 set tabstop=2                   " The width of a tab is two characters
