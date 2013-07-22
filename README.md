@@ -41,6 +41,10 @@ The install script will check for any conflicting dotfiles you might already hav
 
 It will make symlinks to all the dotfiles in the repo (or actually all that are specified in the install script).
 
+### Private settings
+
+If you have things you want to keep private (aliases or something else), you have two files to help you with that. If the file `~/.extra` exists, it will be run at the end of each install or update. If the file `~/.extra-login` exists, it will be run at the end of each login (which is a good place to put aliases).
+
 ## Thanks
 
 I would like to say thanks to all the people who have shared their dotfiles on the internet.
