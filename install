@@ -6,6 +6,7 @@ dir_old=~/.dotfiles_old
 dir_oldText="~/.dotfiles_old"
 files="
 .gitconfig
+.gitignore
 .vimrc
 .zshrc
 "
