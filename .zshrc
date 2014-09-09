@@ -18,6 +18,12 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin
 
+export LC_CTYPE=en_US.UTF-8
+
+# Fix up/down arrow keys for substring searches in history
+bindkey '\eOA' history-substring-search-up
+bindkey '\eOB' history-substring-search-down
+
 # Aliases
 alias gits='git status'
 alias home='cd ~'
