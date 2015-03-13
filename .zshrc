@@ -43,6 +43,8 @@ alias emptytrash='sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 # Add an empty space in the dock to act as a separator
 alias docksep="defaults write com.apple.dock persistent-apps -array-add '{ \"tile-type\" = \"spacer-tile\"; }' && killall Dock"
 
+alias git-clean-branches="git branch --merged | grep -Gv '*' | xargs git branch -d"
+
 # Check for ~/.extra-login file and run that
 if [ -f ~/.extra-login ]; then
   source ~/.extra-login
