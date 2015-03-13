@@ -44,6 +44,7 @@ alias emptytrash='sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 alias docksep="defaults write com.apple.dock persistent-apps -array-add '{ \"tile-type\" = \"spacer-tile\"; }' && killall Dock"
 
 alias git-clean-branches="git branch --merged | grep -Gv '*' | xargs git branch -d"
+alias git-branches="git for-each-ref --sort='authordate:iso8601' --format=' %(authordate:relative)%09%(refname)' refs/heads | sed 's/refs\/heads\///g'"
 
 # Check for ~/.extra-login file and run that
 if [ -f ~/.extra-login ]; then
