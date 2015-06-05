@@ -34,5 +34,6 @@ set smartcase   " ... unless they contain at least one capital letter
 if has("autocmd")
 	filetype on                                                             " Enable file type detection
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript    " Treat .json files as .js
+	autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal colorcolumn=70,80    " Put line limit rulers for commit messages
 endif
 
