@@ -18,6 +18,10 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin
 
+# Add node module binaries to the PATH
+# This allows you to run binaries installed locally in a folder without accessing it via node_modules
+export PATH=$PATH:./node_modules/.bin/
+
 export LC_CTYPE=en_US.UTF-8
 
 # Fix up/down arrow keys for substring searches in history
