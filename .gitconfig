@@ -38,6 +38,9 @@
 	# Log, but compact and pretty
 	lg = log --graph --topo-order --abbrev-commit --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cred<%an>%Creset'
 
+	# List local branches sorted by date in a friendly format
+	br = !git for-each-ref --sort='authordate:iso8601' --format=' %(authordate:relative)%09%(refname)' refs/heads | sed 's/refs\\/heads\\///g'
+
 	# Update submodules, recursively
 	sup = submodule update --init --recursive
 
