@@ -54,3 +54,15 @@ alias git-branches="git for-each-ref --sort='authordate:iso8601' --format=' %(au
 if [ -f ~/.extra-login ]; then
   source ~/.extra-login
 fi
+
+# Functions
+
+# Duplicate a file to the same folder, but with a different name
+# Example where file2.txt will end up in the same folder as file.txt:
+# $ duplicate some/path/to/file.txt file2.txt
+function duplicate {
+  local location=$(dirname "$1")
+  local from="$1"
+  local to="$location/$2"
+  cp $from $to
+}
