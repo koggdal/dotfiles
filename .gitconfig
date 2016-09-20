@@ -41,6 +41,8 @@
 	# List local branches sorted by date in a friendly format
 	br = !git for-each-ref --sort='authordate:iso8601' --format=' %(authordate:relative)%09%(refname)' refs/heads | sed 's/refs\\/heads\\///g'
 
+  brd = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+
 	# Update submodules, recursively
 	sup = submodule update --init --recursive
 
