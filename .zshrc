@@ -28,6 +28,9 @@ export LC_CTYPE=en_US.UTF-8
 bindkey '\eOA' history-substring-search-up
 bindkey '\eOB' history-substring-search-down
 
+# Always append history from each tab
+setopt inc_append_history
+
 # Aliases
 alias gits='git status'
 alias home='cd ~'
