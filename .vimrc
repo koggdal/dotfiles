@@ -18,6 +18,7 @@ let g:solarized_termcolors=256 " Fancy fallback so that you don't have to change
 colorscheme solarized          " The solarized colorscheme
 
 " Whitespace settings
+set expandtab
 set tabstop=2                   " The width of a tab is two characters
 set softtabstop=2               " Hitting backspace removes the same amount of spaces as one tab
 set shiftwidth=2                " Indentation should follow tabstop, or stuff will have different indentation
