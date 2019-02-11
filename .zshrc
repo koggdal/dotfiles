@@ -23,6 +23,7 @@ export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bi
 export PATH=$PATH:./node_modules/.bin/
 
 export LC_CTYPE=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Fix up/down arrow keys for substring searches in history
 bindkey '\eOA' history-substring-search-up
