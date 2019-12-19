@@ -9,13 +9,13 @@ These are the dotfiles I'm using. Feel free to copy and use whatever you want :)
 Clone this repo:
 
 ```
-git clone https://github.com/koggdal/dotfiles.git
+git clone https://github.com/koggdal/dotfiles.git && cd dotfiles
 ```
 
 Run the install command:
 
 ```
-cd dotfiles && chmod +x install && ./install
+./install
 ```
 
 ### Updates
