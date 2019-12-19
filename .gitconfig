@@ -6,6 +6,7 @@
 	safecrlf = true
 	excludesfile = ~/.gitignore
 	editor = /usr/bin/vim
+	filemode = false
 
 [gc]
 	auto = 1
