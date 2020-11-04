@@ -68,7 +68,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+export HOMEBREW_NO_AUTO_UPDATE=1
+
 export YVM_DIR="$HOME/.yvm/.yarn"
 [ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
 
-export HOMEBREW_NO_AUTO_UPDATE=1
