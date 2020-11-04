@@ -64,6 +64,24 @@ function duplicate {
   cp $from $to
 }
 
+function forever {
+  local number_regex='^[0-9]+([.][0-9]+)?$'
+  local sleep_seconds=$1
+
+  if [[ $sleep_seconds =~ $number_regex ]]; then
+    shift
+  else
+    sleep_seconds=1
+  fi
+
+  local command="$@"
+
+  while : ; do
+    sh -c $command;
+    sleep $sleep_seconds
+  done
+}
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
