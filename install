@@ -10,6 +10,7 @@ files="
 .vimrc
 .zshrc
 "
+zsh_theme_file="koggdal.zsh-theme"
 
 # Create backup directory
 echo "Creating $dir_oldText for backup of conflicting dotfiles in ~"
@@ -34,6 +35,10 @@ for file in $files; do
   echo "  Creating symlink to $file in ~"
   ln -s $dir/$file ~/$file
 done
+
+# Create symlink for Zsh theme
+echo -e "\nCreating symlink in ~/.oh-my-zsh/custom/themes/"
+ln -s "$dir/$zsh_theme_file" ~/.oh-my-zsh/custom/themes/$zsh_theme_file
 
 # Check for ~/.extra file
 if [ -f ~/.extra ]; then

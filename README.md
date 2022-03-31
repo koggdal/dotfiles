@@ -6,6 +6,8 @@ These are the dotfiles I'm using. Feel free to copy and use whatever you want :)
 
 ### Installation
 
+This assumes you already have oh-my-zsh installed into `~/.oh-my-zsh`.
+
 Clone this repo:
 
 ```
