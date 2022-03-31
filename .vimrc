@@ -12,10 +12,11 @@ set ruler                      " Show cursor position (row/col)
 set showcmd                    " Show information about the current command
 
 " Style settings
-syntax on                      " Enable syntax highlighting
-set background=dark            " Make the background dark
-let g:solarized_termcolors=256 " Fancy fallback so that you don't have to change your terminal's color scheme
-colorscheme solarized          " The solarized colorscheme
+syntax on
+set t_Co=256
+set cursorline
+set background=light
+colorscheme onehalflight
 
 " Whitespace settings
 set expandtab
