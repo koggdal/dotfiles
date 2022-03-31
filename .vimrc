@@ -17,6 +17,8 @@ set t_Co=256
 set cursorline
 set background=light
 colorscheme onehalflight
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[6 q"
 
 " Whitespace settings
 set expandtab
