@@ -78,6 +78,7 @@ function forever {
 
   while : ; do
     sh -c $command;
+    echo ""
     sleep $sleep_seconds
   done
 }
