@@ -92,6 +92,6 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 # This is for oh-my-zsh to let it make internal `git status` faster.
 export DISABLE_UNTRACKED_FILES_DIRTY=true
 
-export YVM_DIR="$HOME/.yvm/.yarn"
+export YVM_DIR="$HOME/.yvm"
 [ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh
 
